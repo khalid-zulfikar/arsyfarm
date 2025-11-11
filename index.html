@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toko Arsy Farm</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <header class="bg-white shadow fixed w-full z-10">
+        <div class="container mx-auto flex items-center justify-between p-4">
+            <!-- Logo + Nama -->
+            <div class="flex items-center space-x-3">
+                <!-- Ganti src dengan logo kamu -->
+                <img src="image/logo.jpg" alt="Logo Arsy Farm" class="w-10 h-10 rounded-full object-cover">
+                <h1 class="text-2xl font-bold text-blue-600">Arsy Farm</h1>
+            </div>
+
+            <!-- Navigasi Desktop -->
+            <nav class="space-x-6 hidden md:block">
+                <a href="#home" class="hover:text-blue-600">Home</a>
+                <a href="#produk" class="hover:text-blue-600">Gallery Guppy</a>
+                <a href="#tentang" class="hover:text-blue-600">Tentang</a>
+                <a href="#kontak" class="hover:text-blue-600">Kontak</a>
+            </nav>
+
+            <!-- Tombol Hamburger untuk Mobile -->
+            <button id="menu-toggle" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white px-4 pt-2 pb-4 shadow-lg">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="block py-2 hover:text-blue-600">Home</a>
+                <a href="#produk" class="block py-2 hover:text-blue-600">Gallery Guppy</a>
+                <a href="#tentang" class="block py-2 hover:text-blue-600">Tentang</a>
+                <a href="#kontak" class="block py-2 hover:text-blue-600">Kontak</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-blue-900 to-purple-800 text-white pt-24 md:pt-24 pb-20 md:pb-24">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <!-- Kolom Kiri: Teks dan Deskripsi -->
+                <div class="text-center lg:text-left">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                        Selamat Datang di <span class="text-red-400">Arsy Farm</span>
+                    </h1>
+                    <p class="text-xl max-w-2xl mb-8 opacity-90">
+                        Toko Guppy terlengkap dengan berbagai kebutuhannya.
+                        Mulai dari makanan, aksesoris, hingga perawatan kesehatan.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#produk"
+                            class="bg-red-500 text-white px-8 py-3 rounded-lg font-medium text-lg hover:bg-red-600 transition-colors inline-block text-center">
+                            Lihat Produk
+                        </a>
+                        <a href="#tentang"
+                            class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium text-lg hover:bg-white hover:text-purple-900 transition-colors inline-block text-center">
+                            Tentang Kami
+                        </a>
+                    </div>
+
+                    <!-- Statistik -->
+                    <!-- <div class="mt-12 grid grid-cols-3 gap-4">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold">500+</div>
+                            <div class="text-sm opacity-80">Produk Tersedia</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold">10K+</div>
+                            <div class="text-sm opacity-80">Pelanggan Puas</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold">5+</div>
+                            <div class="text-sm opacity-80">Tahun Pengalaman</div>
+                        </div>
+                    </div> -->
+                </div>
+
+                <!-- Kolom Kanan: Video -->
+                <div class="relative">
+                    <div
+                        class="bg-gradient-to-br from-pink-400 to-red-500 rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <div class="relative h-64 md:h-80 lg:h-96">
+                            <iframe class="w-full h-full rounded-xl"
+                                src="https://www.youtube.com/embed/JIUczINjRY8?autoplay=0&mute=0&rel=0&modestbranding=1"
+                                title="Video PetShop" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produk Section -->
+    <section id="produk" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-10">Produk Unggulan Kami</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Card Produk -->
+                <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden">
+                    <img src="image/ikan1.webp" alt="Kucing Persia" class="w-full h-56 object-cover">
+                    <div class="p-5">
+                        <h4 class="font-bold text-lg">Albino Koi Red Ear</h4>
+                        <p class="text-gray-600 mt-2">Jenis guppy populer yang harganya stabil...</p>
+                        <span class="block text-blue-600 font-semibold mt-3">Rp 100.000 - Rp 150.000</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden">
+                    <img src="image/ikan2.webp" alt="Anjing Golden" class="w-full h-56 object-cover">
+                    <div class="p-5">
+                        <h4 class="font-bold text-lg">Albino Full Red (Red Ear)</h4>
+                        <p class="text-gray-600 mt-2">Jenis guppy populer yang harganya stabil...</p>
+                        <span class="block text-blue-600 font-semibold mt-3">Rp 100.000 - Rp 150.000</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden">
+                    <img src="image/ikan3.jpg" alt="Kura-Kura Sulcata" class="w-full h-56 object-cover">
+                    <div class="p-5">
+                        <h4 class="font-bold text-lg"> Platinum Red Tail Dumbo Ear</h4>
+                        <p class="text-gray-600 mt-2">Jenis guppy populer yang harganya stabil...</p>
+                        <span class="block text-blue-600 font-semibold mt-3">Rp 100.000 - Rp 150.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami -->
+    <section id="tentang" class="py-20 bg-gradient-to-b from-white to-blue-50">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+
+                <!-- Kolom Kiri: Teks -->
+                <div class="text-gray-700 leading-relaxed">
+                    <h3 class="text-4xl font-extrabold mb-6 text-blue-800 border-l-4 border-blue-600 pl-3">Tentang Kami
+                    </h3>
+
+                    <p class="mb-5 text-justify">
+                        <strong>Arsy Farm</strong> berawal pada tanggal <strong>11 September 2020</strong>, bermula dari
+                        kesukaan owner terhadap ikan hias sedari kecil hingga muncullah keinginan beternak dan berjalan
+                        sampai sekarang. Kami memulai dari kolam kecil di halaman belakang hingga berkembang menjadi
+                        beternak modern dengan fokus utama pada pembudidayaan ikan guppy premium.
+                    </p>
+
+                    <p class="mb-5 text-justify">
+                        Saat ini, <strong>Arsy Farm</strong> dikenal sebagai salah satu penyedia ikan guppy terpercaya
+                        dengan pelanggan dari seluruh Indonesia dan luar negeri. Indonesia menempati peringkat kedua
+                        sebagai
+                        eksportir ikan hias terbesar di dunia setelah Singapura. Oleh karenanya, Arsy Farm berkomitmen
+                        untuk
+                        menyediakan ikan hias berkualitas tinggi bagi pasar lokal maupun internasional.
+                    </p>
+
+                    <p class="mb-5 text-justify">
+                        Berlokasi di <strong>Jl. Berliani 1 No. 02 RW 06, Desa Cijujung, Kecamatan Cibinong, Kabupaten
+                            Bogor</strong>.
+                        Dengan segala lika-likunya, Arsy Farm terus aktif berperan dalam dunia perikanan nasional
+                        melalui
+                        penjualan, keikutsertaan dalam event kontes guppy, serta berbagi konten edukasi di berbagai
+                        platform
+                        media sosial dan forum diskusi.
+                    </p>
+
+                    <p class="text-justify">
+                        Peternakan Arsy Farm juga telah banyak diliput oleh <strong>YouTuber</strong> serta menjadi
+                        tempat
+                        belajar bagi <strong>siswa SMA dan mahasiswa</strong> dalam menjalankan tugas pembelajaran
+                        mereka.
+                        Kami berharap ke depan dapat terus memberikan dampak positif bagi perkembangan perikanan hias
+                        nasional.
+                    </p>
+                </div>
+
+                <!-- Kolom Kanan: Dua Gambar -->
+                <div class="space-y-6">
+                    <div class="overflow-hidden rounded-2xl shadow-xl">
+                        <img src="image/tentang3.JPG" alt="Proses Budidaya Arsy Farm"
+                            class="w-full h-64 md:h-80 object-cover transform hover:scale-105 transition-transform duration-500 ease-out">
+                    </div>
+                    <div class="overflow-hidden rounded-2xl shadow-xl">
+                        <img src="image/tentang4.JPG" alt="Ikan Guppy Arsy Farm"
+                            class="w-full h-64 md:h-80 object-cover transform hover:scale-105 transition-transform duration-500 ease-out">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Kontak -->
+    <section id="kontak" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold mb-8 text-center">Kontak Kami</h3>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Informasi Alamat -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-2xl font-bold mb-6 text-blue-600">Lokasi Kami</h4>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-500 mt-1 mr-4 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <div>
+                                    <h5 class="font-semibold text-lg mb-2">Alamat</h5>
+                                    <p class="text-gray-700">
+                                        Jl. Berlian 1 No. 39 Rt 02/04<br>
+                                        Desa Curug, Kecamatan Gunungsindur<br>
+                                        Kab. Bogor, Kode Pos 16340
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-500 mt-1 mr-4 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <div>
+                                    <h5 class="font-semibold text-lg mb-2">Telepon</h5>
+                                    <p class="text-gray-700">+62 851-5643-0204</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-500 mt-1 mr-4 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <div>
+                                    <h5 class="font-semibold text-lg mb-2">Email</h5>
+                                    <p class="text-gray-700">arsyfarm@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-500 mt-1 mr-4 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <div>
+                                    <h5 class="font-semibold text-lg mb-2">Jam Operasional</h5>
+                                    <p class="text-gray-700">
+                                        Senin - Jumat: 08.00 - 17.00 WIB<br>
+                                        Sabtu: 08.00 - 15.00 WIB<br>
+                                        Minggu: Tutup
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Peta -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden h-full">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.123456789012!2d106.12345678901234!3d-6.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMDcnMjguNCJTIDEwNsKwMDcnMjguNCJF!5e0!3m2!1sen!2sid!4v1234567890123!5m2!1sen!2sid"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" class="w-full h-full">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-6 text-center">
+        <p>&copy; 2025 Arsy Farm. Semua Hak Dilindungi.</p>
+        <div class="mt-2 space-x-3">
+            <a href="#" class="hover:text-gray-300">Facebook</a>
+            <a href="#" class="hover:text-gray-300">Instagram</a>
+            <a href="#" class="hover:text-gray-300">TikTok</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk toggle menu mobile -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuToggle.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Tutup menu mobile saat mengklik link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
